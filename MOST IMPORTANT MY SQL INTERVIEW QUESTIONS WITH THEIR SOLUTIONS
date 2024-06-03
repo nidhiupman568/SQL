@@ -1,0 +1,337 @@
+1. What is MySQL and what sets it apart from other relational databases?
+
+MySQL is an open-source relational database management system (RDBMS) known for its reliability, scalability, and performance in handling structured data. Its usage of SQL (Structured Query Language) for data management makes it widely adopted across various applications.
+
+2. How do you create a database in MySQL?
+
+To create a database in MySQL, the CREATE DATABASE statement is employed followed by the desired name for the database.
+
+```sql
+CREATE DATABASE mydatabase;
+```
+
+3. Explain the distinction between the CHAR and VARCHAR data types.
+
+CHAR: A fixed-length character data type where storage size is predetermined, padding trailing spaces to reach the defined length.
+
+VARCHAR: A variable-length character data type where storage size is dependent on the actual data length, without any padding of spaces.
+
+4. Elaborate on the differences between SQL and MySQL.
+
+SQL
+
+MySQL
+
+Structured query language for managing relational database systems.
+
+An open-source relational database management system utilizing SQL.
+
+Not an independent product and lacks a license; it's a standard language.
+
+An implementation of an RDBMS utilizing SQL, available under the GNU GPL.
+
+Supports XML and user-defined functions.
+
+Doesn't support XML and user-defined functions.
+
+5. What is the default port for the MySQL server?
+
+The default port for the MySQL server is 3306.
+
+6. How can one learn batch mode in MySQL?
+
+Batch mode in MySQL is learned through executing the command:
+
+```shell
+mysql <batch-file>;
+```
+
+or
+
+```shell
+mysql <batch-file> mysql.out
+```
+
+7. How many different types of tables exist in MySQL?
+
+There are five types of tables in MySQL:
+
+- Heap table
+- Merge table
+- MyISAM table
+- InnoDB table
+- ISAM table
+
+8. Enumerate the disparities between CHAR and VARCHAR data types in MySQL.
+
+CHAR and VARCHAR differ in storage and retrieval methods:
+
+- CHAR has a fixed column length, while VARCHAR's length is variable.
+- CHAR is faster but consumes more storage than VARCHAR.
+- CHAR can hold a maximum of 255 characters, whereas VARCHAR can store up to 4000 characters.
+
+9. What is the distinction between CHAR_LENGTH and LENGTH?
+
+CHAR_LENGTH returns the character count, while LENGTH returns the byte count. For Latin characters, the counts are identical, but they differ for Unicode and other encodings.
+
+10. Explain the significance of '%' and '_' in the LIKE statement.
+
+In the LIKE statement:
+
+- '_' represents a single character.
+- '%' represents zero or more characters.
+
+11. How many index columns can be created in a table?
+
+Up to 16 index columns can be created in a table.
+
+12. What are the available string types for columns?
+
+The available string types for columns are:
+
+- SET
+- BLOB
+- TEXT
+- ENUM
+- CHAR
+- VARCHAR
+
+13. Distinguish between FLOAT and DOUBLE.
+
+FLOAT stores floating-point numbers with 8-place accuracy and occupies 4 bytes, while DOUBLE stores them with 18-place accuracy and occupies 8 bytes.
+
+14. Explain the disparities between BLOB and TEXT.
+
+BLOB:
+
+- Stores large objects in binary form.
+- Sorting and comparison are case-sensitive.
+
+TEXT:
+
+- Case-insensitive storage for large objects.
+- Sorting and comparison are case-insensitive.
+
+15. Elucidate the difference between the HAVING and WHERE clauses in MySQL.
+
+WHERE filters rows, while HAVING filters groups. WHERE is used without GROUP BY, whereas HAVING is used with GROUP BY.
+
+16. Define REGEXP.
+
+REGEXP is a pattern match where a pattern is matched anywhere in the search value.
+
+17. How do you add a column in MySQL?
+
+To add a column in MySQL, ALTER TABLE statement is used:
+
+```sql
+ALTER TABLE tab_name
+ADD COLUMN col_name col_definition [FIRST|AFTER exist_col];
+```
+
+18. How can columns be deleted in MySQL?
+
+Columns can be removed in MySQL using the ALTER TABLE statement:
+
+```sql
+ALTER TABLE table_name DROP COLUMN column1, column2….;
+```
+
+19. What's the procedure for deleting a table in MySQL?
+
+To delete a table in MySQL, the DROP TABLE statement is employed, which removes all data from the table.
+
+```sql
+DROP TABLE table-name;
+```
+
+20. How do mysql_fetch_array() and mysql_fetch_object() differ?
+
+mysql_fetch_array() retrieves a result row as either a related array or a regular array, whereas mysql_fetch_object() retrieves it as an object.
+
+21. What's the method for retrieving the top 10 rows?
+
+To retrieve the top 10 rows, the LIMIT clause is used in the SELECT statement:
+
+```sql
+SELECT * FROM table_name LIMIT 0,10;
+```
+
+22. How does NOW() differ from CURRENT_DATE()?
+
+NOW() returns the current date and time, while CURRENT_DATE() returns only the current date.
+
+23. What is the purpose of the 'DISTINCT' keyword in MySQL?
+
+The 'DISTINCT' keyword retrieves unique records by removing all duplicate entries from the result set.
+
+24. Which storage engines are utilized in MySQL?
+
+MySQL employs various storage engines or table types, each offering distinct capabilities and functions for storing and managing data.
+
+25. How do you create a table in MySQL?
+
+To create a table in MySQL, the CREATE TABLE command is used, specifying the table name and column definitions.
+
+```sql
+CREATE TABLE 'Employee' ('Employee_Name' VARCHAR(128), 'Employee_ID' VARCHAR(128), 'Employee_Salary' VARCHAR(16), 'Designation' CHAR(4));
+```
+
+26. How can data be inserted into a MySQL table?
+
+To insert data into a MySQL table, the INSERT INTO statement is utilized.
+
+```sql
+INSERT INTO table_name (field1, field2, field3)  
+VALUES (value1, value2, value3);
+```
+
+27. What statement is used to identify duplicate rows in a MySQL table?
+
+To find duplicate rows in a MySQL table, the following statement can be employed:
+
+```sql
+SELECT Table_Name, Category
+FROM Product
+GROUP BY Name, Category
+HAVING COUNT(id) > 1;
+```
+
+28. Enumerate the types of relationships commonly used in MySQL.
+
+MySQL utilizes three types of relationships:
+
+- One-to-one
+- One-to-many (or many-to-one)
+- Many-to-many
+
+29. How do you insert dates into MySQL?
+
+Dates can be inserted into MySQL using the INSERT statement. MySQL offers various data types for dates such as DATE, DATETIME, TIMESTAMP, and YEAR.
+
+```sql
+INSERT INTO table_name (column_name, column_date) VALUES ('DATE: Manual Date', '2023-5-20');
+```
+
+30. Define a join and list the different types of joins in MySQL.
+
+A join connects two or more tables and retrieves only the matching values across all tables. MySQL supports four types of joins:
+
+- Inner Join
+- Left Join
+- Right Join
+- Full Join
+
+31. What is a primary key and how can it be dropped in MySQL?
+
+A primary key uniquely identifies each row in a table and cannot be null. To drop a primary key in MySQL, the ALTER TABLE statement is used:
+
+```sql
+ALTER TABLE table_name DROP PRIMARY KEY;
+```
+
+32. What characterizes a heap table in MySQL?
+
+A heap table in MySQL is typically used for temporary and fast storage. It has certain limitations such as disallowing BLOB or TEXT fields, supporting only certain comparison operators, and not supporting the AUTO_INCREMENT command.
+
+33. What distinguishes a primary key from a candidate key?
+
+A primary key uniquely identifies each row in a table and can only be defined once per table. A candidate key, on the other hand, can also serve as a primary key and can be used for all foreign key references.
+
+34. Differentiate between the DELETE and TRUNCATE commands in MySQL.
+
+DELETE is a Data Manipulation Language (DML) command used to delete rows from a table based on given conditions. TRUNCATE, on the other hand, is a Data Definition Language (DDL) command used to delete all rows from a table.
+
+35. What is InnoDB in MySQL?
+
+InnoDB is a storage engine for MySQL that offers support for ACID transactions, row-level locking, and foreign key constraints. It is owned by Oracle Corporation.
+
+36. Explain the difference between UNION and UNION ALL in MySQL.
+
+UNION combines the result sets of multiple SELECT statements and removes duplicate rows, while UNION ALL also combines result sets but retains all rows, including duplicates.
+
+37. Define a 'timestamp' in MySQL.
+
+In MySQL, a 'timestamp' is a data type that automatically records the time when a row is added to or updated in a table.
+
+38. How are ENUMs used in MySQL?
+
+ENUMs in MySQL are string objects used to specify a set of predefined values when creating tables.
+
+```sql
+CREATE TABLE size (name ENUM('Small', 'Medium', 'Large'));
+```
+
+39. How can the maximum size of heap be controlled in MySQL?
+
+The max_heap_table_size MySQL configuration variable is used to control the maximum size of the heap.
+
+```sql
+SET max_heap_table_size = M;
+```
+
+40. What is a view and how is it created in MySQL?
+
+A view in MySQL is a virtual table that contains rows and columns like a real table but is based on the result set of a SELECT query. Views are created using the CREATE VIEW statement.
+
+```sql
+CREATE VIEW view_name AS
+SELECT columns
+FROM tables
+[WHERE conditions];
+```
+
+41. Where are MyISAM tables stored and what are the formats of storage for MyISAM?
+
+MyISAM tables in MySQL are stored on disk. They have three formats of storage:
+
+- .frm file for table definition
+- .MYD (MYData) extension for data files
+- .MYI (MYIndex) extension for index files
+
+42. How can images be saved in MySQL?
+
+Images can be saved in MySQL by converting them into blobs and then inserting them into the database.
+
+43. What are triggers and how many types are available in MySQL tables?
+
+Triggers in MySQL are procedural code that is automatically executed in response to certain events on a table. There are six types of triggers:
+
+- BEFORE INSERT
+- AFTER INSERT
+- BEFORE UPDATE
+- AFTER UPDATE
+- BEFORE DELETE
+- AFTER DELETE
+
+44. What distinguishes MySQL MyISAM Static from MyISAM Dynamic?
+
+MySQL MyISAM Static tables have a fixed width for all fields and are easier to recover in case of corruption. MyISAM Dynamic tables, on the other hand, do not have a fixed width for all fields and may store data like TEXT or BLOB.
+
+45. What are Access Control Lists (ACLs) in MySQL?
+
+Access Control Lists (ACLs) in MySQL are lists of permissions associated with an object, such as a table. They control access to various database resources and are used for troubleshooting access issues.
+
+46. Define normalization and list its different types.
+
+Normalization is the process of organizing data to avoid duplication and redundancy. The different types of normalization include:
+
+- First Normal Form (1NF)
+- Second Normal Form (2NF)
+- Third Normal Form (3NF)
+
+47. What are the various methods to create an index?
+
+Indexes in MySQL can be created using T-SQL statements, SQL Server Management Studio, or by specifying PRIMARY KEY or UNIQUE constraints in CREATE TABLE or ALTER TABLE statements.
+
+48. Describe a clustered index and a non-clustered index.
+
+A clustered index is used to arrange data in a table based on the index key, whereas a non-clustered index does not affect the physical order of the table. The data in a table with a clustered index is stored in the order of the index key.
+
+49. How can you validate emails using a single query in MySQL?
+
+Email validation using a single query in MySQL can be achieved using the REGEXP_LIKE function to check if the email matches a specific pattern.
+
+50. How is the --secure-file-priv handled in MySQL?
+
+The --secure-file-priv option in MySQL restricts the server from loading directories using the LOAD DATA INFILE command. To handle it, files can be transferred to the directory specified by secure-file-priv, or secure-file-priv can be disabled at the beginning and cannot be re-enabled later.
