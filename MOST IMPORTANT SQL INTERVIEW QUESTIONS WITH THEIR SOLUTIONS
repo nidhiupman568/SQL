@@ -1,0 +1,322 @@
+1. What is SQL?
+SQL, or Structured Query Language, serves as a means to communicate with databases. It facilitates tasks such as database creation, table creation, data retrieval, and updates. SQL adheres to ANSI standards and offers a range of functionalities.
+
+2. What is a database?
+A database is an organized collection of data, structured for efficient storage and retrieval. It encompasses schemas, tables, queries, and views, providing a systematic approach to manage and access data. Database Management Systems enable users to interact with databases effectively.
+
+3. Does SQL support programming language features?
+SQL is primarily a command language rather than a programming language, lacking constructs like loops or conditional statements. It focuses on executing commands to manipulate database data, enabling tasks such as querying, updating, and deleting records.
+
+4. What is the difference between CHAR and VARCHAR2 datatype in SQL?
+CHAR and VARCHAR2 are both character data types in SQL, but they differ in their handling of string length. CHAR stores fixed-length strings, while VARCHAR2 accommodates variable-length strings. This means CHAR enforces a specific length, whereas VARCHAR2 allows flexibility in string length.
+
+5. What do you mean by data definition language?
+Data Definition Language (DDL) encompasses SQL queries like CREATE, DROP, and ALTER, which define the structure of data. DDL commands establish the schema, tables, and constraints within a database.
+
+6. What do you mean by data manipulation language?
+Data Manipulation Language (DML) refers to SQL operations aimed at accessing or modifying data within a database. DML commands include INSERT, DELETE, SELECT, and UPDATE, enabling users to interact with the data stored in tables.
+
+7. What is a view in SQL?
+A view in SQL represents a virtual table derived from one or more existing tables. It shares similarities with real tables, having rows and columns, but its data is dynamically generated based on specified criteria. Views are created using the CREATE VIEW statement.
+
+8. What do you mean by foreign key?
+A foreign key in SQL establishes a relationship between two tables, where the key in one table references the primary key in another. It ensures data integrity by enforcing referential integrity constraints between related tables.
+
+9. What are table and Field?
+A table in SQL comprises rows and columns, storing data in a structured format. Rows represent records, while columns represent fields, each holding a specific piece of information.
+
+10. What is the primary key?
+A primary key in SQL uniquely identifies each record in a table. It serves as a unique identifier, ensuring data integrity and facilitating efficient data retrieval.
+
+11. What is a Default constraint?
+A Default constraint in SQL specifies a default value for a column when no other value is provided during data insertion. It ensures consistency in data entry by automatically assigning a predefined value.
+
+12. What is normalization?
+Normalization is a database design technique aimed at minimizing redundancy and dependency by organizing data into tables and defining relationships. It helps in reducing insertion, deletion, and update anomalies, ensuring data integrity.
+
+13. What is Denormalization?
+Denormalization is a database optimization technique where redundant data is added to tables to improve query performance. It involves reintroducing redundancy into normalized data structures to enhance read performance, albeit at the cost of some data integrity.
+
+14. What is a query?
+A query in SQL is a request for data retrieval or manipulation from a database. It enables users to extract specific information from the database by executing structured commands.
+
+15. What is a subquery?
+A subquery in SQL is a nested query within another query. It allows for more complex data retrieval by embedding one query within the WHERE clause or other parts of another query.
+
+16. What are the different operators available in SQL?
+SQL supports various operators, including arithmetic, logical, and comparison operators, facilitating operations on data within queries.
+
+17. What is a Constraint?
+A constraint in SQL defines rules that restrict the type of data that can be stored in a table. It ensures data integrity by enforcing predefined conditions on the data stored in columns.
+
+18. What is Data Integrity?
+Data Integrity refers to the accuracy and consistency of data stored in a database. It ensures that data remains correct and reliable throughout its lifecycle, enforced through constraints and validation rules.
+
+19. What is Auto Increment?
+Auto Increment is a feature in SQL databases that automatically generates unique numeric values for a column, typically used as primary keys. It simplifies data entry by eliminating the need to manually assign identifiers.
+
+20. What is MySQL collation?
+MySQL collation defines rules for comparing characters within a character set, based on their encoding. It ensures consistent sorting and comparison of characters in SQL queries.
+
+21. What are user-defined functions?
+User-defined functions in SQL allow developers to extend the functionality of SQL by creating custom functions tailored to specific requirements. These functions can be implemented using PL/SQL or Java, providing additional capabilities beyond built-in SQL functions.
+
+22. What are all types of user-defined functions?
+User-defined functions in SQL can be categorized into scalar, inline table-value, and multi-statement table-value functions. Each type serves different purposes and offers varying capabilities for data manipulation.
+
+23. What is a stored procedure?
+A stored procedure in SQL is a set of SQL statements grouped together to perform a specific task or operation. It can accept input parameters, execute SQL queries, and return results, providing modularity and reusability in database operations.
+
+24. What are aggregate and scalar functions?
+Aggregate functions in SQL operate on sets of values and return a single value summarizing the data, such as SUM or AVG. Scalar functions, on the other hand, operate on individual values and return a single value based on input parameters.
+
+25. What is an ALIAS command?
+In SQL, an alias is a temporary name assigned to a table or column within a query. It improves readability and simplifies complex queries by providing alternative names for tables or columns.
+
+26. What are Union, minus, and Interact commands?
+Union, Intersect, and Except are set operations in SQL used to combine or compare the results of two or more queries. They help in merging data sets, finding intersections, and identifying differences between sets.
+
+27. What is T-SQL?
+T-SQL, or Transact-SQL, is an extension of SQL developed by Microsoft for use with SQL Server databases. It includes additional features and capabilities beyond standard SQL, optimized for interactions with Microsoft SQL Server.
+
+28. What is ETL in SQL?
+ETL, or Extract, Transform, Load, is a process in data warehousing used to extract data from various sources, transform it according to business rules, and load it into a data warehouse for analysis and reporting.
+
+29. How to copy tables in SQL?
+In SQL, tables can be copied using the CREATE TABLE statement with a SELECT query specifying the source table. This creates a new table with the same structure and data as the original table.
+
+30. What is SQL injection?
+SQL injection is a security vulnerability in web applications that allows attackers to inject malicious SQL code into input fields, potentially compromising the underlying database. It can lead to unauthorized access, data theft, and other security breaches if not properly mitigated.
+
+31. How can we deactivate a trigger in PL/SQL? What are the circumstances where this might be necessary?
+
+Yes, triggers in PL/SQL can be disabled. This is particularly useful under certain conditions:
+
+An object referenced by the trigger is unavailable.
+During a large data load to expedite the process without triggering the associated triggers.
+When loading data into a table with an active trigger.
+To disable a trigger, you utilize the `ALTER TRIGGER` statement with the `DISABLE` option. Alternatively, you can deactivate all triggers associated with a table simultaneously using `ALTER TABLE` with the `DISABLE ALL TRIGGERS` option.
+
+32. Enumerate the disparities between SQL and PL/SQL.
+
+SQL:
+
+PL/SQL:
+
+SQL functions as a querying or commanding language.
+
+PL/SQL constitutes a complete programming language.
+
+SQL revolves around data manipulation.
+
+PL/SQL exhibits a procedural nature.
+
+SQL is declarative in essence.
+
+PL/SQL, however, is procedural.
+
+SQL instructs databases on "what" to do.
+
+PL/SQL instructs databases on "how" to do.
+
+SQL permits embedding within PL/SQL.
+
+PL/SQL does not support embedding within SQL.
+
+33. Distinguish between the 'BETWEEN' and 'IN' operators in SQL.
+
+BETWEEN: This operator retrieves rows within a specified range.
+
+Example:
+
+```sql
+SELECT * FROM Students WHERE ROLL_NO BETWEEN 20 AND 30;
+```
+
+IN: Conversely, 'IN' checks for values present in specified sets.
+
+Example:
+
+```sql
+SELECT * FROM Students WHERE ROLL_NO IN (20,21,23);
+```
+
+34. Provide an SQL query to fetch names of employees beginning with 'A'.
+
+To achieve this, the 'LIKE' operator in SQL is employed. It filters data by pattern matching in the 'WHERE' clause.
+
+```sql
+SELECT * FROM Employees WHERE EmpName LIKE 'A%';
+```
+
+35. Elucidate the distinction between primary key and unique constraints.
+
+Primary Key:
+
+Unique Constraints:
+
+36. Explain the concept of joins in SQL and delineate the types of joins.
+
+An SQL join combines data from two or more tables based on a common field. The types of joins include:
+
+INNER JOIN: Retrieves rows where a condition is met in both tables.
+
+LEFT JOIN: Returns all rows from the left table and matching rows from the right table.
+
+RIGHT JOIN: Analogous to LEFT JOIN but vice versa.
+
+FULL JOIN: Merges results of LEFT JOIN and RIGHT JOIN.
+
+37. Define an index in the context of databases.
+
+An index is a data structure enhancing the speed of data retrieval operations on a database table at the expense of additional storage space and write operations. It enables faster access to data based on frequently searched values.
+
+38. What does the 'On Delete cascade' constraint signify?
+
+The 'ON DELETE CASCADE' constraint in MySQL automatically deletes rows from the child table when corresponding rows in the parent table are deleted.
+
+39. Elaborate on the usage of the 'WITH' clause in SQL.
+
+The 'WITH' clause permits defining temporary relationships whose scope is limited to the query in which the clause appears. Predicates within the 'WITH' clause are applied post-grouping, facilitating the use of aggregate functions.
+
+40. Enumerate the various attributes associated with indexes.
+
+Attributes of indexes encompass access types, access time, insertion time, deletion time, and space overhead.
+
+41. Define a Cursor in the context of databases.
+
+A Cursor acts as a temporary memory or workspace allocated by the database server during DML operations on tables. It is used to store table data temporarily.
+
+42. List the different types of relationships in SQL.
+
+Types of relationships include one-to-one, one-to-many, many-to-one, and self-referencing relationships.
+
+43. Explain what a trigger is in SQL.
+
+A trigger is an automatic statement executed by a system when modifications occur in the database. It specifies when the trigger executes and the action to perform upon execution, often used to enforce integrity and referential constraints.
+
+44. Differentiate between SQL DELETE and SQL TRUNCATE commands.
+
+SQL DELETE:
+
+SQL TRUNCATE:
+
+45. Contrast Cluster and Non-Cluster Indexes.
+
+Clustered Index:
+
+Non-Clustered Index:
+
+46. Define a Live Lock in database systems.
+
+A live lock occurs when two or more processes repetitively engage in the same interactions in response to changes in other processes, without accomplishing useful work.
+
+47. Discuss the functionality of the Case WHEN statement in SQL.
+
+The Case WHEN statement in SQL enables conditional logic akin to if/then constructs, allowing for conditional processing within queries.
+
+48. Name the various types of case manipulation functions available in SQL.
+
+Three primary case manipulation functions in SQL include LOWER, UPPER, and INITCAP.
+
+49. Define local and global variables in SQL and outline their differences.
+
+Global variables:
+
+Local variables:
+
+50. Specify the function used to remove trailing spaces from a string in SQL.
+
+In SQL, the TRIM function is utilized to remove trailing spaces from a string.
+
+51. Compare and contrast the SQL TRUNCATE and DROP statements.
+
+SQL DROP:
+
+SQL TRUNCATE:
+
+52. Which operator is employed in SQL queries for pattern matching?
+
+The LIKE operator in SQL is utilized for pattern matching in queries.
+
+53. Explain the SQL ORDER BY statement.
+
+The ORDER BY statement in SQL is used to sort fetched data either in ascending or descending order based on one or more columns.
+
+54. Define the SQL HAVING statement.
+
+The SQL HAVING statement specifies conditions for group or aggregate function results after data grouping, distinct from the WHERE clause.
+
+55. Elucidate the SQL AND and OR statements with examples.
+
+In SQL, the AND operator displays records where both conditions are true, while the OR operator displays records where at least one condition is true.
+
+56. Explain the SQL BETWEEN statement.
+
+The SQL BETWEEN condition tests if an expression falls within a specified range, inclusive of the specified values.
+
+57. Describe the purpose of COMMIT and ROLLBACK commands in SQL.
+
+COMMIT permanently saves transaction changes, while ROLLBACK undoes them, restoring the database to its previous state.
+
+58. Discuss the ACID properties in database transactions.
+
+ACID properties (Atomicity, Consistency, Isolation, Durability) ensure reliability and consistency in database transactions.
+
+59. Are NULL values equivalent to zero or blank spaces in SQL?
+
+In SQL, NULL values signify unknown or missing data, distinct from zero or blank spaces. Two NULL values may not necessarily be considered equivalent.
+
+60. Why are group functions essential in SQL?
+
+Group functions, also known as aggregate functions, consolidate multiple rows into a single value based on specified criteria, offering crucial data summarization capabilities in SQL queries.
+
+61. What purpose does the MERGE statement serve in SQL?
+
+The MERGE statement in SQL combines INSERT, UPDATE, and DELETE operations into one statement. It provides a convenient method for handling these operations simultaneously, particularly beneficial for managing large databases efficiently.
+
+62. How can you retrieve common records from two tables?
+
+To fetch data from multiple tables, a JOIN operation is utilized. By employing JOIN, data from multiple tables can be obtained based on specified conditions.
+
+63. Enumerate the advantages of PL/SQL functions.
+
+PL/SQL functions offer several benefits:
+
+- Improved performance by reducing the number of database calls.
+- Enhanced code organization and manageability through modularization.
+- Promotion of code reuse.
+- Enhanced security by encapsulating code within the database, thus concealing internal details.
+
+64. What SQL query displays the current date?
+
+The CURRENT_DATE function returns the current date in SQL.
+
+```sql
+SELECT CURRENT_DATE;
+```
+
+65. What are Nested Triggers?
+
+Nested triggers are triggers containing INSERT, UPDATE, or DELETE logic within themselves. When such a trigger is fired due to data modification, it can further trigger additional data modifications, creating a nested trigger scenario.
+
+66. How can one find constraint information available in a table?
+
+To ascertain constraint details on a table in SQL Server, one can consult the data dictionary, a collection of database tables storing information about the database's structure.
+
+67. How can duplicate entries be avoided in a query without using the DISTINCT keyword?
+
+Duplicate entries can be circumvented by employing methods such as using row numbers, self-joins, or the GROUP BY clause instead of relying on the DISTINCT keyword.
+
+68. What distinguishes the NVL and NVL2 functions?
+
+NVL(expr1, expr2) converts a null value to an actual value in SQL. NVL2(expr1, expr2, expr3) examines the first expression; if it's not null, it returns the second expression; otherwise, it returns the third.
+
+69. Explain the difference between COALESCE() and ISNULL() functions.
+
+COALESCE() returns the first non-NULL expression among its arguments, while ISNULL() is used in SQL Server to replace NULL values with a specified value.
+
+70. Name the operator used for appending two strings in SQL.
+
+In SQL, the concatenation operator "||" is utilized for appending two strings.
+
